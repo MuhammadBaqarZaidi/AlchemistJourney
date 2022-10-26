@@ -1,0 +1,394 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+body{
+    --primary: #FFC107;
+    --primarydark: rgba(255, 160, 0, 1);
+    --primarylight: rgba(255, 236, 179, 1);
+    --secondary: #A020F0;
+    --accent: rgba(83, 109, 254, 1);
+    --white: #fff;
+    --black: #000;
+    --gray: #555;
+
+    --headingfont: 'Times New Roman', Times, serif;
+    --bodyfont: Arial, Helvetica, sans-serif;
+    --thirdfont: ;
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    color: var(--black);
+    background-color: var(--white);
+}
+
+h1{
+    font-family: var(--headingfont);
+    font-size: 72px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    font-family: var(--headingfont);
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+h3{
+    font-family: var(--bodyfont);
+    font-size: clamp(16px,2.5vw ,36px);
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+h5{
+    font-family: var(--bodyfont);
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    font-family: var(--bodyfont);
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: var(--accent);
+    text-decoration: none;
+    font-family: var(--bodyfont);
+}
+
+a:hover{
+    border-bottom: var(--accent) solid 2px;
+    transition: ease-in;
+}
+
+.primary-btn{
+    color: var(--white);
+    background-color: var(--accent);
+    border: var(--accent) 2px solid;
+
+    padding: 8px 16px;
+    border-radius: 2px;
+    font-weight: 600;
+}
+
+.primary-btn:hover{
+    color: var(--accent);
+    background-color: var(--primary);
+}
+
+.secondary-btn{
+    color: var(--accent);
+    border: var(--accent) 2px solid;
+
+    padding: 8px 16px;
+    border-radius: 2px;
+    font-weight: 600;
+}
+
+.secondary-btn:hover{
+    background-color: var(--primary);
+}
+
+.image img{
+    width: 100%;
+    height: auto;
+}
+
+#header{
+    width: 100%;
+    height: 80px;
+    padding: 20px;
+}
+
+section{
+    width: 100%;
+    padding: 40px;
+}
+
+.container{
+    width: 100%;
+    max-width: 1400px;
+    min-height: 30px;
+    margin: auto;
+}
+
+#header .container{
+    position: relative;
+    min-height: fit-content;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header .container .logo{
+    width: 200px;
+}
+
+#header .container .navigation{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 40px;
+
+    display: none;
+    background-color: var(--primarylight);
+}
+
+#header .container .navigation nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+#hero{
+    background-color: var(--white);
+}
+
+#hero .container{
+    display: grid;
+    gap: 16px;
+}
+
+#hero .container .hero-left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+#proof{
+    background-color: var(--primarylight);
+    width: 100%;
+}
+
+#proof .container{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#features .container .grid{
+    display: grid;
+    width: 100%;
+}
+
+#features .container .grid .text ul{
+    height: 100%;
+
+    margin-block-start: 0;
+    margin-block-end: 0;
+
+    font-size: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+#benifits .container{
+    display: grid;
+    width: 100%;
+}
+
+#benifits .container .image{
+    padding: 40px;
+}
+
+#benifits .container .text{
+    padding: 40px;
+    
+}
+
+#benifits .container .benifit1, .benifit3{
+    background-color: var(--primarylight);
+}
+
+#reviews{
+    background-color: var(--primarylight);
+}
+
+#reviews .container .review-couresel{
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#gallery .container .gallery-images{
+    padding: 20px;
+
+    display: grid;
+}
+
+#cta{
+    background-color: var(--primarylight);
+}
+
+#cta .container .nav{
+    padding: 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+#cta a{
+    font-size: 24px;
+}
+
+#other .container .grid{
+    display: grid;
+}
+
+#other .container .grid .books, .experiment, .online{
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#other .container .grid .books img, .experiment img, .online img{
+    border: var(--black) solid 1px;
+}
+
+#footer{
+    background-color: var(--primarylight);
+    padding: 40px;
+    width: 100%;
+}
+
+#footer .container form{
+    padding: 40px;
+    margin: auto;
+
+    display: flex;
+}
+
+#footer .container form input{
+    background: var(--white);
+    width: 600px;
+    height: 40px;
+    border: var(--accent) 1px solid;
+}
+
+#footer .container form button{
+    background: var(--accent);
+    width: 200px;
+    height: 40px;
+    color: var(--white);
+    border: var(--accent);
+}
+
+@media (min-width: 600px) {
+    p{
+        font-size: 1.5rem;
+    }
+
+    #hero .container .hero-right img{
+        width: 60vw;
+        float: right;
+    }
+
+    #proof .container{
+        flex-direction: row;
+    }
+
+    #features .container .grid{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #benifits .container{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 32px;
+    }
+
+    #gallery .container .gallery-images{
+        grid-template-columns: repeat(2,1fr);
+        gap: 16px;
+    }
+
+    #gallery .container .gallery-images img{
+        padding: 20px;
+    }
+
+    #cta{
+        padding: 80px;
+    }
+
+    #other .container .grid{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+    }
+
+
+}
+
+@media (min-width: 1000px) {
+    #header .container .mobile-nav{
+        display: none;
+    }
+
+    #header .container .navigation{
+        position: relative;
+        display: block;
+        background-color: var(--white);
+        padding: 0;
+        top: 0;
+        right: 0;
+    }
+
+    #header .container .navigation nav{
+        flex-direction: row;
+    }
+
+    #hero .container{
+        padding: 20px;
+        grid-template-columns: 60% 40%;
+        
+    }
+
+    #hero .container .hero-left{
+        padding-top: 50px;
+    }
+
+    #hero .container .hero-right img{
+        width: 30vw;
+    }
+
+    #features .container .grid .image{
+        padding: 20px;
+    }
+
+    #reviews .container .review-couresel{
+        height: 150px;
+    }
+
+
+}
